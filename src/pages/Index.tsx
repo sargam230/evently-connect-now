@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Calendar, MapPin, Users, Mail, Phone, MessageSquare, ArrowRight, CheckCircle, Star, Quote } from 'lucide-react';
 import { Button } from "@/components/ui/button";
@@ -262,13 +261,13 @@ const Index = () => {
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Contact Us</h2>
-              <p className="text-gray-600">Have feedback or suggestions? We'd love to hear from you!</p>
+              <p className="text-gray-600">Get in touch with us for any inquiries or support!</p>
             </div>
             
-            <div className="grid md:grid-cols-2 gap-12">
+            <div className="flex justify-center">
               {/* Contact Info */}
-              <div className="space-y-6">
-                <h3 className="text-xl font-semibold text-gray-900 mb-6">Get in Touch</h3>
+              <div className="space-y-6 max-w-md">
+                <h3 className="text-xl font-semibold text-gray-900 mb-6 text-center">Get in Touch</h3>
                 
                 <div className="flex items-center space-x-4">
                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
@@ -276,7 +275,7 @@ const Index = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900">Email</h4>
-                    <p className="text-gray-600">hello@evently.college</p>
+                    <p className="text-gray-600">arorasargam23@gmail.com</p>
                   </div>
                 </div>
                 
@@ -286,7 +285,7 @@ const Index = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900">Phone</h4>
-                    <p className="text-gray-600">+1 (555) 123-4567</p>
+                    <p className="text-gray-600">+91 123456789</p>
                   </div>
                 </div>
                 
@@ -295,58 +294,10 @@ const Index = () => {
                     <MessageSquare className="w-6 h-6 text-blue-600" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900">Social</h4>
-                    <p className="text-gray-600">@EventlyCollege</p>
+                    <h4 className="font-semibold text-gray-900">Instagram</h4>
+                    <p className="text-gray-600">@gdg.scriet</p>
                   </div>
                 </div>
-              </div>
-              
-              {/* Feedback Form */}
-              <div className="bg-gray-50 rounded-lg p-8">
-                <h3 className="text-xl font-semibold text-gray-900 mb-6">Send Feedback</h3>
-                
-                <form onSubmit={handleFormSubmit} className="space-y-4">
-                  <div>
-                    <Input
-                      type="text"
-                      name="name"
-                      placeholder="Your Name"
-                      value={formData.name}
-                      onChange={handleInputChange}
-                      className="w-full"
-                    />
-                  </div>
-                  
-                  <div>
-                    <Input
-                      type="email"
-                      name="email"
-                      placeholder="Your Email"
-                      value={formData.email}
-                      onChange={handleInputChange}
-                      className="w-full"
-                    />
-                  </div>
-                  
-                  <div>
-                    <Textarea
-                      name="message"
-                      placeholder="Your Message"
-                      value={formData.message}
-                      onChange={handleInputChange}
-                      rows={4}
-                      className="w-full resize-none"
-                    />
-                  </div>
-                  
-                  <Button
-                    type="submit"
-                    className="w-full bg-blue-600 hover:bg-blue-700 text-white"
-                  >
-                    <CheckCircle className="w-5 h-5 mr-2" />
-                    Send Feedback
-                  </Button>
-                </form>
               </div>
             </div>
           </div>
