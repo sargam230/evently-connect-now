@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { Calendar, MapPin, Users, Mail, Phone, MessageSquare, ArrowRight, CheckCircle, Star, Trophy, Heart } from 'lucide-react';
+import { Calendar, MapPin, Users, Mail, Phone, MessageSquare, ArrowRight, CheckCircle, Star, Quote } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -17,35 +17,61 @@ const Index = () => {
   const events = [
     {
       id: 1,
-      name: "Tech Fest 2025",
-      date: "October 15, 2025",
-      venue: "Main Auditorium",
-      description: "Annual technology festival featuring coding competitions, tech talks, and startup showcases.",
-      rsvpLink: "https://forms.google.com/tech-fest-2025"
+      name: "She Codes – Women in Tech Meetup",
+      date: "July 15, 2025",
+      venue: "Seminar Hall",
+      description: "Join us for an inspiring meetup celebrating women in technology. Network with fellow female developers, share experiences, and learn from industry leaders.",
+      rsvpLink: "https://forms.gle/aM7LkwMpkJ5sGXK1A"
     },
     {
       id: 2,
-      name: "Cultural Night",
-      date: "November 8, 2025",
-      venue: "College Ground",
-      description: "Celebrate diversity with music, dance, and food from different cultures around the world.",
-      rsvpLink: "https://forms.google.com/cultural-night-2025"
+      name: "GDG 101 – What, Why & How",
+      date: "August 20, 2025",
+      venue: "Auditorium",
+      description: "Get introduced to Google Developer Groups and learn about the community, opportunities, and how to get involved in the tech ecosystem.",
+      rsvpLink: "https://forms.gle/aM7LkwMpkJ5sGXK1A"
     },
     {
       id: 3,
-      name: "Career Fair",
-      date: "December 3, 2025",
-      venue: "Sports Complex",
-      description: "Meet top recruiters and explore internship and job opportunities across various industries.",
-      rsvpLink: "https://forms.google.com/career-fair-2025"
+      name: "Gemini Jam – Build with AI",
+      date: "September 18, 2025",
+      venue: "Lab 3",
+      description: "Hands-on workshop to build exciting AI applications using Google's Gemini AI. Bring your creativity and let's code together!",
+      rsvpLink: "https://forms.gle/aM7LkwMpkJ5sGXK1A"
     },
     {
       id: 4,
-      name: "Green Campus Initiative",
-      date: "January 20, 2026",
-      venue: "Campus Garden",
-      description: "Join us in making our campus more sustainable with tree planting and eco-awareness activities.",
-      rsvpLink: "https://forms.google.com/green-campus-2026"
+      name: "Firebase in 1 Hour",
+      date: "October 12, 2025",
+      venue: "CSE Lab 1",
+      description: "Crash course on Firebase - learn to build and deploy web applications with real-time database, authentication, and hosting in just one hour.",
+      rsvpLink: "https://forms.gle/aM7LkwMpkJ5sGXK1A"
+    },
+    {
+      id: 5,
+      name: "Hack with Heart – Mini Ideathon",
+      date: "November 9, 2025",
+      venue: "Innovation Hub",
+      description: "A mini ideathon focused on solving real-world problems with technology. Bring your passion for social impact and innovative ideas.",
+      rsvpLink: "https://forms.gle/aM7LkwMpkJ5sGXK1A"
+    }
+  ];
+
+  const testimonials = [
+    {
+      id: 1,
+      text: "Finally, I don't miss events anymore!",
+      author: "Sarah M."
+    },
+    {
+      id: 2,
+      text: "Found my first hackathon through Evently.",
+      author: "Alex K."
+    },
+    {
+      id: 3,
+      text: "Super clean design and easy to use.",
+      author: "Priya R."
     }
   ];
 
@@ -92,6 +118,7 @@ const Index = () => {
             <div className="hidden md:flex space-x-6">
               <a href="#events" className="text-gray-600 hover:text-blue-600">Events</a>
               <a href="#about" className="text-gray-600 hover:text-blue-600">About</a>
+              <a href="#testimonials" className="text-gray-600 hover:text-blue-600">Testimonials</a>
               <a href="#contact" className="text-gray-600 hover:text-blue-600">Contact</a>
             </div>
           </nav>
@@ -104,8 +131,11 @@ const Index = () => {
           <h1 className="text-5xl md:text-6xl font-bold mb-6 text-gray-900">
             Evently
           </h1>
-          <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+          <p className="text-2xl text-gray-700 mb-4 font-medium">
             Never miss a college event again.
+          </p>
+          <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+            One place for all tech, cultural, and fun events on campus.
           </p>
           <Button 
             className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg"
@@ -117,17 +147,31 @@ const Index = () => {
         </div>
       </section>
 
+      {/* About Section */}
+      <section id="about" className="py-16 px-4 bg-gray-50">
+        <div className="container mx-auto">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl font-bold text-gray-900 mb-8">About Evently</h2>
+            <div className="bg-white rounded-lg p-8 shadow-sm">
+              <p className="text-lg text-gray-600">
+                Evently helps students stay updated with college events. No more last-minute posters or missed announcements — just clear info and easy RSVPs.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Upcoming Events Section */}
-      <section id="events" className="py-16 px-4 bg-gray-50">
+      <section id="events" className="py-16 px-4">
         <div className="container mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Upcoming Events</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Discover amazing events happening on campus. Don't miss out on the fun!
+              Discover amazing tech events happening on campus. Don't miss out on the learning opportunities!
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {events.map((event) => (
               <Card key={event.id} className="bg-white shadow-sm hover:shadow-md transition-shadow">
                 <CardHeader>
@@ -163,58 +207,52 @@ const Index = () => {
         </div>
       </section>
 
-      {/* About Section */}
-      <section id="about" className="py-16 px-4">
+      {/* Testimonials Section */}
+      <section id="testimonials" className="py-16 px-4 bg-gray-50">
         <div className="container mx-auto">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8">About Evently</h2>
-            <div className="bg-gray-50 rounded-lg p-8">
-              <p className="text-lg text-gray-600 mb-6">
-                Evently is your go-to platform for discovering and participating in all the exciting events happening on campus. 
-                From tech fests and cultural nights to career fairs and workshops, we make sure you never miss out on opportunities 
-                to learn, network, and have fun.
-              </p>
-              <p className="text-lg text-gray-600">
-                Built by students, for students, Evently bridges the gap between event organizers and attendees, creating a 
-                vibrant campus community where everyone stays connected and engaged.
-              </p>
-            </div>
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">What Students Say</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Hear from fellow students who've discovered amazing events through Evently.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            {testimonials.map((testimonial) => (
+              <Card key={testimonial.id} className="bg-white shadow-sm">
+                <CardContent className="p-6">
+                  <div className="flex items-start space-x-3">
+                    <Quote className="w-8 h-8 text-blue-600 flex-shrink-0 mt-1" />
+                    <div>
+                      <p className="text-gray-700 mb-3 italic">
+                        {testimonial.text}
+                      </p>
+                      <p className="text-sm font-medium text-gray-900">
+                        — {testimonial.author}
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Why Join Events Section */}
-      <section className="py-16 px-4 bg-gray-50">
-        <div className="container mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8">Why Join Events?</h2>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Star className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Build Your Network</h3>
-              <p className="text-gray-600">Connect with like-minded peers and industry professionals who share your interests and ambitions.</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Trophy className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Gain New Skills</h3>
-              <p className="text-gray-600">Participate in workshops, competitions, and learning sessions that enhance your academic and professional skills.</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Heart className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Create Memories</h3>
-              <p className="text-gray-600">Make lasting friendships and unforgettable experiences that will define your college journey.</p>
-            </div>
-          </div>
+      {/* Call to Action Section */}
+      <section className="py-16 px-4 bg-blue-600">
+        <div className="container mx-auto text-center">
+          <h2 className="text-3xl font-bold text-white mb-4">Ready to Get Involved?</h2>
+          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+            Don't let amazing opportunities pass you by. RSVP to upcoming events and stay connected with your campus community.
+          </p>
+          <Button 
+            className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-medium"
+            onClick={() => document.getElementById('events')?.scrollIntoView({ behavior: 'smooth' })}
+          >
+            View All Events
+            <ArrowRight className="ml-2 w-5 h-5" />
+          </Button>
         </div>
       </section>
 
