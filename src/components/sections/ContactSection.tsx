@@ -20,7 +20,7 @@ const ContactSection = () => {
                 <Mail className="w-6 h-6 text-primary" />
               </div>
               <h3 className="text-lg font-semibold text-foreground mb-2">Email</h3>
-              <p className="text-muted-foreground">random</p>
+              <p className="text-muted-foreground">random123@gmail.com</p>
             </CardContent>
           </Card>
           
